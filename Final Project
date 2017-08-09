@@ -1,1 +1,229 @@
 # Dee’s Mood Music is a website that will allow you to select a mood and music. I’ve included pages, list views and data attributes. 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link href="styles/custom.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="styles/themes/ThemeLab.css" />
+<link rel="stylesheet" href="styles/themes/ThemeLab5.css" />
+<link rel="stylesheet" href="styles/themes/ThemeProj5.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+    });
+});
+</script>
+
+</head>
+<body>
+<div data-role="panel" id="myPanel">
+<h2>Panel Header</h2>
+<ul data-role="listview" data-theme="c">
+<li class="menu"><a href="#">Menu 1</a></li>
+<li class="menu"><a href="#">Menu 2</a></li>
+<li class="menu"><a href="#">Menu 3</a></li>
+<li class="menu"><a href="#">Menu 4</a></li>
+<li class="menu"><a href="#">Menu 5</a></li>
+<li class="menu"><a href="#">Menu 6</a></li>
+</ul>
+<p>You can close this panel by clicking outside of it, pressing the Esc key, or by swiping.</p>
+</div>
+<div id="page" data-role="page" data-theme="a" data-add-back-btn="true">
+	<div data-role="header" data-theme="a">
+	  <div class="logo"><img src="music_symbol.png" width="300" height="75" alt=""/></div>
+  </div>
+
+  <div data-role="header">
+    <h1>Dee's Mood Music</h1>
+    <a href="#myPanel" class="ui-btn ui-btn-inline">Open Panel</a><a href="#myPanel" class="ui-btn ui-btn-inline">Open Panel</a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview" data-theme="c" data-filter="true">
+      <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-notext ui-btn-inline">Check</a>
+      <div class="ui-nodisc-icon ui-alt-icon"><!-- Classes added to the wrapper -->
+			<li><a href="#dailyadvice">Daily Advice</a></li>
+      <li><a href="#musiclinks">Music Links</a></li>
+    	<li><a href="#deessongoftheday">Dee's Song of the Day</a></li>
+      <li><a href="#grid">Grid</a></li>
+      <li><a href="#form">Form</a><li>
+</div>
+		</ul>
+  </div>
+    <div data-role="footer" data-theme="a">
+      <h4>detricesamuel@sotd.us &copy; 2017</h4>
+    </div>
+</div>
+
+<div id="dailyadvice" data-role="page" data-theme="a" data-add-back-btn="true">
+	<div data-role="Dee's Daily Advice" data-theme="a" data-add-back-btn="true">
+	  <h1>Daily Advice</h1>
+	</div>
+	<div data-role="content">
+	  <h3>Header</h3>
+	  <p> Positive thoughts = Positive actions, you set the tone of your day!</p>
+	</div>
+	<div data-role="footer" data-theme="a">
+	  <h4>detricesamuel@sotd.us &copy; 2017</h4>
+	</div>
+</div>
+<div id="musiclinks" data-role="page" data-theme="a" data-add-back-btn="true">
+	<div data-role="Music Links" data-theme="a" data-add-back-btn="true">
+    <div data-role="collapsible" class="ui-nodisc-icon ui-alt-icon"
+		<h1>Moody Music</h1>
+	</div>
+	<div data-role="content">
+	  <h3>What's Your Mood?</h3>
+    <h4>Heading</h4>
+    <p>I'm the colaapsible content. by default I'm closed</p>
+  </div>
+
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:purple;"></div><br>
+    <button>Click to select HAPPY mood</button><br><br>
+
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <button>Click to select ANGRY mood</button><br><br>
+
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+    <button>Click to select SAD mood</button><br><br>
+
+    </div>
+	<div data-role="footer" data-theme="a">
+		<h4>detricesamuel@sotd.us &copy; 2017</h4>
+	</div>
+</div>
+
+<div id="deessongoftheday" data-role="page" data-theme="a" data-add-back-btn="true">
+	<div data-role="Dee's Song of the Day" data-theme="a" data-add-back-btn="true">
+		<h1>Dee's Song of the Day</h1>
+	</div>
+	<div data-role="content">
+	  <h3>My Song</h3>
+    <a href="LOVE STILL GOOD by Chico Debarge.mp3">Go To Song</a>
+	  </div>
+
+	<div data-role="footer" data-theme="a" >
+	  <h4>detricesamuel@sotd.us &copy; 2017</h4>
+	</div>
+</div>
+<div data-role="page" id="grid" data-theme="a" data-add-back-btn="true">
+<div data-role="header" data-theme="a" data-add-back-btn="true">
+<h1>Grid</h1>
+</div>
+<div data-role="content">
+<div class="ui-grid-d">
+<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+<div class="ui-block-d"><div class="ui-bar ui-bar-a" style="height:60px">Block D</div></div>
+<div class="ui-block-e"><div class="ui-bar ui-bar-a" style="height:60px">Block E</div></div>
+</div><!-- /grid-d -->
+
+</div>
+</div>
+</div>
+
+<div data-role="page" id="form" data-theme="a" data-add-back-btn="true">
+	<div data-role="header" data-theme="a" data-add-back-btn="true">
+		<h1>Form</h1>
+	</div>
+	<div data-role="content">Content</div>
+</p>
+<ul data-role="listview" data-theme="c" data-filter="true">
+  <form action="form.php" method="post">
+    <label for="mysong">My Song:</label>
+    <input type="text" name="mysong" id="mysong" data-clear-btn="true">
+    <label for="artistname">Artist Name:<label>
+    <input type="text" name="artistname" id="Artist Name" data-clear-btn="true">
+    <label for="genre">Genre:</label>
+    <input type="text" genre="schoolid" id="Genre" data-clear-btn="true">
+    <input type="reset" value="Reset Button">
+    <input type="submit" value="Submit Button"
+
+<textarea class="localstorage" placeholder="Anything you type here will be saved with HTML5 localStorage." autofocus></textarea>
+<button class="clear">Clear localStorage</button>
+<button class="empty">Empty localStorage</button>
+</div>
+		</form>
+	<div data-role="footer"dat-theme="a">
+		<h4>detricesamuel@sotd.us &copy; 2017</h4>
+	</div>
+</div>
+</div>
+
+<script>
+
+(function() {
+
+var rasm = document.querySelector('.localstorage');
+
+function supportsLocalStorage() {
+
+return typeof(Storage)!== 'undefined';
+
+}
+
+if (!supportsLocalStorage()) {
+
+rasm.value = 'Your browser does not support localStorage.';
+
+} else {
+
+try {
+
+setInterval(function() {
+
+localStorage.setItem('autosave', rasm.value);
+
+}, 1000);
+
+} catch (e) {
+
+if (e == QUOTA_EXCEEDED_ERR) {
+
+alert('Quota exceeded!');
+
+}
+
+}
+
+if (localStorage.getItem('autosave')) {
+
+rasm.value = localStorage.getItem('autosave');
+
+}
+
+document.querySelector('.clear').onclick = function() {
+
+rasm.value = '';
+
+localStorage.removeItem('autosave');
+
+};
+
+document.querySelector('.empty').onclick = function() {
+
+rasm.value = '';
+
+localStorage.clear();
+
+};
+
+}
+
+})();
+
+</script>
+
+</div>
+</body>
+</html>
